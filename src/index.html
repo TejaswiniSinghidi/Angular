@@ -1,17 +1,27 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-  <head>
-    <base href="/">
-    <meta charset="utf-8">
-    <title>FountainJS</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
-    <link rel="icon" type="image/png" href="http://fountainjs.io/assets/imgs/fountain.png" />
-  </head>
+<head>
 
-  <body ng-app="app">
-    <div class="todoapp">
-      <ui-view></ui-view>
-    </div>
-  </body>
+</head>
+<body ng-app="myApp">
+
+<p><a href="#/">Main</a></p>
+
+<a href="#apartments">Apartments</a>
+<a href="#townhouses">Town Houses</a>
+<a href="#independent">Independent Houses</a>
+
+<p>Choose the property which u would like to rent</p>
+
+<div ng-view></div>
+<script src="scripts\lib\angular.min.js"></script>
+<script src="scripts\lib\angular-route.js"></script>
+<script src="controllers\angularscript.js"></script>
+<script>
+function myFunction(){
+document.getElementById("demo").innerHTML="TownHouses";
+}
+</script>
+
+</body>
 </html>

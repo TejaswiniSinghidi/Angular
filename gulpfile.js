@@ -17,6 +17,9 @@ gulp.task('serve', gulp.series('webpack:watch', 'watch', 'browsersync'));
 gulp.task('serve:dist', gulp.series('default', 'browsersync:dist'));
 gulp.task('default', gulp.series('clean', 'build'));
 gulp.task('watch', watch);
+gulp.task('copyHtml', function() {
+  gulp.src('src/*.html').pipe(gulp.dest('public'));
+});
 
 function reloadBrowserSync(cb) {
   browserSync.reload();
@@ -27,3 +30,5 @@ function watch(done) {
   gulp.watch(conf.path.src('app/**/*.html'), reloadBrowserSync);
   done();
 }
+
+
